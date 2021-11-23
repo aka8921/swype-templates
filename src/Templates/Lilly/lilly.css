@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.lilly-container {
+	font-family: 'Roboto', sans-serif;
+	flex: 1;
+	background-color: rgb(77, 77, 77);
+
+	/* background-image: url('https://images.squarespace-cdn.com/content/v1/5eb48d3fef49df153d320521/1592093428962-6WKI9TWCDJ78O1MTWYPV/UnicornVectorGradient_20.jpg?format=2500w'); */
+	background-image: url('https://images.pexels.com/photos/9615797/pexels-photo-9615797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+	background-position: center;
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.lilly {
+	padding: 20px;
+	border-radius: 20px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	/* background: rgba(255, 255, 255, 0.7); */
+	/* background: none; */
+	/* backdrop-filter: blur(0px); */
+}
+
+.lilly-icon-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: white;
+	width: 90px;
+	height: 90px;
+	border-radius: 50px;
+}
+
+.lilly-icon-container > img {
+	width: 40px;
+	height: auto;
+	transform: scale(0);
+}
+
+.lilly-meta {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	overflow: hidden;
+	margin-left: 0px;
+}
+
+.lilly-title {
+	width: 0px;
+
+	overflow: hidden;
+	font-weight: 600;
+	font-size: 40px;
+}
+
+.lilly-label {
+	width: 0px;
+	overflow: hidden;
+	font-weight: 300;
+	font-size: 30px;
+	color: #3d3d3d;
+}
