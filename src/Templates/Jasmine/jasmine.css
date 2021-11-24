@@ -5,7 +5,7 @@
 	flex: 1;
 	background-color: rgb(77, 77, 77);
 
-	background-image: url('https://images.squarespace-cdn.com/content/v1/5eb48d3fef49df153d320521/1592093428962-6WKI9TWCDJ78O1MTWYPV/UnicornVectorGradient_20.jpg?format=2500w');
+	background-image: url('https://images.pexels.com/photos/3356416/pexels-photo-3356416.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
 	background-position: center;
 	background-size: cover;
 
@@ -15,7 +15,7 @@
 	justify-content: center;
 }
 
-/* .jasmine-parent {
+.jasmine-parent {
 	width: 320px;
 	height: 320px;
 	border-radius: 350px;
@@ -25,7 +25,8 @@
 	justify-content: center;
 
 	background-color: rgba(255, 255, 255, 0.562);
-} */
+	backdrop-filter: blur(5px);
+}
 
 .jasmine {
 	width: 300px;

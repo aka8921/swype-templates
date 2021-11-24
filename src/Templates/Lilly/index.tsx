@@ -1,6 +1,6 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-require('./lilly.css');
+import './lilly.css';
 
 export const Lilly: React.FC<{
 	titleText: string;
@@ -94,6 +94,17 @@ export const Lilly: React.FC<{
 		},
 	});
 
+	const blur = spring({
+		fps,
+		from: 0,
+		to: 15,
+		frame: frame - 40,
+		config: {
+			stiffness: 50,
+			damping: 200,
+		},
+	});
+
 	return (
 		<div className="lilly-container">
 			<div
@@ -103,6 +114,7 @@ export const Lilly: React.FC<{
 					background: `rgba(255, 255, 255, ${backgroundOpacity})`,
 					transform: `scale(${scale})`,
 					opacity: `${opacity}`,
+					backdropFilter: `blur(${blur}px)`,
 				}}
 			>
 				<div

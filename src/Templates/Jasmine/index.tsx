@@ -27,13 +27,6 @@ export const Jasmine: React.FC<{
 		frame,
 	});
 
-	const scale = spring({
-		fps,
-		from: 0,
-		to: 1,
-		frame: frame - 5,
-	});
-
 	const scaleParent = spring({
 		fps,
 		from: 0,
@@ -41,25 +34,36 @@ export const Jasmine: React.FC<{
 		frame,
 	});
 
+	const scale = spring({
+		fps,
+		from: 0,
+		to: 1,
+		frame: frame - 12,
+		config: {
+			damping: 20,
+			stiffness: 5,
+		},
+	});
+
 	const scaleTitle = spring({
 		fps,
 		from: 0,
 		to: 1,
-		frame: frame - 10,
+		frame: frame - 35,
 	});
 
 	const scaleLabel = spring({
 		fps,
 		from: 0,
 		to: 1,
-		frame: frame - 15,
+		frame: frame - 40,
 	});
 
 	const scaleParentDown = spring({
 		fps,
 		from: 1,
 		to: 0,
-		frame: frame - 90,
+		frame: frame - 150,
 		config: {
 			overshootClamping: true,
 		},
@@ -68,29 +72,36 @@ export const Jasmine: React.FC<{
 	return (
 		<div className="jasmine-container">
 			<div
-				className="jasmine"
+				className="jasmine-parent"
 				style={{
 					transform: `scale(${frame < 59 ? scaleParent : scaleParentDown})`,
-					opacity: opacity,
-					marginTop: `${topParent}px`,
 				}}
 			>
-				<span
-					className="title"
+				<div
+					className="jasmine"
 					style={{
-						transform: `scale(${scaleTitle})`,
+						transform: `scale(${scale})`,
+						opacity: opacity,
+						marginTop: `${topParent}px`,
 					}}
 				>
-					Thomson Impressions
-				</span>
-				<span
-					style={{
-						transform: `scale(${scaleLabel})`,
-					}}
-					className="label"
-				>
-					2 BEDDER
-				</span>
+					<span
+						className="title"
+						style={{
+							transform: `scale(${scaleTitle})`,
+						}}
+					>
+						Thomson Impressions
+					</span>
+					<span
+						style={{
+							transform: `scale(${scaleLabel})`,
+						}}
+						className="label"
+					>
+						2 BEDDER
+					</span>
+				</div>
 			</div>
 		</div>
 	);

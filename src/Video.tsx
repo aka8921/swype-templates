@@ -2,6 +2,7 @@ import {Composition} from 'remotion';
 
 import {Jasmine} from './Templates/Jasmine';
 import {Lilly} from './Templates/Lilly';
+import {Tulip} from './Templates/Tulip';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -26,6 +27,20 @@ export const RemotionVideo: React.FC = () => {
 				width={406}
 				height={720}
 				defaultProps={{
+					titleText: '3',
+					labelText: 'Bedrooms',
+				}}
+			/>
+
+			<Composition
+				id="Tulip"
+				component={Tulip}
+				durationInFrames={180}
+				fps={30}
+				width={406}
+				height={720}
+				defaultProps={{
+					headerText: 'Provident Park Square',
 					titleText: '3',
 					labelText: 'Bedrooms',
 				}}
