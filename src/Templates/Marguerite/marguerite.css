@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.marguerite-container {
+	white-space: nowrap;
+	width: 100vw;
+	overflow: hidden;
+	font-family: 'Poppins', sans-serif;
+	flex: 1;
+	background-color: rgb(77, 77, 77);
+
+	background-image: url('https://images.pexels.com/photos/4577650/pexels-photo-4577650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+	background-position: center;
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-start;
+
+	padding: 25px;
+}
+
+.marguerite {
+	display: flex;
+	align-items: center;
+}
+
+.marguerite-meta {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+
+	justify-content: center;
+	gap: 5px;
+
+	margin-right: 20px;
+}
+
+.marguerite-title {
+	background-color: white;
+	font-weight: 600;
+	font-size: 25px;
+
+	padding: 5px 10px;
+	overflow: hidden;
+
+	/* width: 0px;
+	width: 185px;
+	overflow: hidden; */
+}
+
+.marguerite-label {
+	background-color: white;
+	padding: 5px 10px;
+	overflow: hidden;
+
+	/* width: 0px;
+	overflow: hidden;
+	width: 100px;
+	padding: 5px 0; */
+}
+
+.marguerite-icon > svg {
+	width: 70px;
+	height: auto;
+}
